@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <title>“真正的”二进制编辑器 - 来自二进制帝</title>
+        <link rel="stylesheet" type="text/css" href="二进制帝才配得上的专属样式.css" />
+        <link rel="icon" href="favicon.jpeg" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.jpeg" type="image/x-icon">
+    </head>
+    <body bgcolor="#4c97ff">
+        <div id="dialog">
+            <h1 id="not_support">我们暂时不兼容您的浏览器:(</h1>
+            <h3 id="support_bro">我们二进制帝设计的的在线二进制编辑器采用超超先进技术，新版在线二进制编辑器兼容以下任意浏览器：</h3>
+            <div id="chrome_box">
+                <img src="https://www.google.cn/chrome/static/images/chrome-logo.svg" id="broser_img"></img>
+                <p id="broser_ver">Chrome版本1000.0或以上（处理器256位或以上）</p>
+            </div>
+            <div id="firefox_box">
+                <img src="https://www.firefox.com.cn/media/protocol/img/logos/firefox/browser/logo-lg-high-res.fbc7ffbb50fd.png" id="broser_img"></img>
+                <p id="broser_ver">Firefox版本1000.0或以上（处理器256位或以上）</p>
+            </div>
+            <div id="safari_box">
+                <img src="https://developer.apple.com/assets/elements/icons/safari-ios/safari-ios-96x96_2x.png" id="broser_img"></img>
+                <p id="broser_ver">Safari版本120或以上（需要macOS 105.4或更高版本）</p>
+            </div>
+            <a href="二进制帝网.html">
+                <button id="back">返回二进制帝网</button>
+            </a>
+        </div>
+        <div id="loading">
+            <img src="loading.gif" id="loading_img"></img>
+            <p id="loading_lar">正在加载...</p>
+            <p id="loading_small">正在下载“二进制”翻译器</p>
+        </div>
+        <script type="text/javascript">
+            function error(){
+                alert("出现了一些小问题，我们正在重试。")
+                setTimeout(error1,2000)
+            }
+            function del(){
+                var loading = document.getElementById("loading");
+                loading.parentNode.removeChild(loading);
+            }
+            function error1(){
+                if (confirm("加载失败，我们需要检查您的浏览器配置。")){ 
+                    setTimeout(del,500)
+                } 
+                else{ 
+                    window.history.back(-1);
+                } 
+            }
+            setTimeout(error,2000)
+        </script>
+    </body>
+</html>
